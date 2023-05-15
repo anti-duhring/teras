@@ -15,6 +15,8 @@ for i in range(len(numbersList)):
         numberClosestToJokerIndex.append(i)
         numberClosestToJoker = numbersList[i]
 
+numberClosestToJokerIndex = [x for x in numberClosestToJokerIndex if abs(numbersList[x] - joker) == abs(numberClosestToJoker - joker)]
+
 print(f'menor distância absoluta: {abs(numberClosestToJoker - joker)}')
 for i in numberClosestToJokerIndex:
     print(f'{i}:{numbersList[i]}')
